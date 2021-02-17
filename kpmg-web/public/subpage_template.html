@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="ko_KR">
+
+<head>
+    <title>데이터 시각화 프로젝트</title>
+    <link rel="stylesheet" type="text/css" href="base.css" />
+    <link rel="stylesheet" type="text/css" href="subpage.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbwkee77-XK2WfrYe91wTSAwv2LIgPY2Q&callback=initMap&libraries=&v=weekly"
+        defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KRdisplay=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <ul>
+                <li class="left">
+                    <a href="/">
+                        <img class="logo-img" src="images/logo.svg" alt="yeonji-logo" height="40" width="40" />
+                    </a>
+                </li>
+                <li class="left">
+                    <div class="navbar-title">
+                        <h6>데이터 시각화 프로젝트</h6>
+                        <h5>데이터 시각화 프로젝트</h5>
+                    </div>
+                </li>
+                <li class="right">
+                    <div class="right-container">
+                        <img class="lang-img" src="images/language.svg" alt="lang-logo" height="20" width="20" />
+                        <a id="kor" href="/">KOR</a>
+                        <a id="eng" href="/?lang=eng">ENG</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <iframe class="youtube-video" src="https://youtube.com/embed/Go5Q5Q7YqjU" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <section>
+            <img class="pin-img" src='images/pin.png' alt="pin">
+            <br />
+            <h3>제목을 입력하세요</h3>
+            <h5><img src="images/location.svg" />한 문장 설명을 입력하세요</h5>
+        </section>
+
+        <div id="map"></div>
+
+        <section>
+            <h3>'한문장 요약을 입력하세요'</h3>
+        </section>
+
+        <!-- 슬라이드 컴포넌트입니다. -->
+        <div class="slide-container">
+            <div class="bbg"></div>
+            <!-- 아래 div 를 복사하세요 -->
+            <div class="slides fade">
+                <!-- 아래 src 값을 원하는 이미지 주소로 바꿔주세요. -->
+                <img src="images/4.jpg" style="width:100%">
+            </div>
+            
+            <div class="slides fade">
+                <img src="https://wallpaperaccess.com/full/1802075.jpg" style="width:100%">
+            </div>
+            <div class="slides fade">
+                <img src="https://wallpaperaccess.com/full/1802077.jpg" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)"><img src="images/arrow.png"/></a>
+            <a class="next" onclick="plusSlides(1)"><img src="images/arrow.png"/></a>
+        </div>
+
+        <section>
+            <!-- 문단 구분은 <p> 문단 내용 </p>  의 형태로 합니다.  -->
+            <!-- 아래 내용을 지우고 원하시는 내용으로 바꾸시면 됩니다. -->
+            <p>
+                문단을 입력하세요. 
+            </p>
+            <p>
+                옷을 황금시대를 역사를 용감하고 것이다. 싸인 위하여 것은 이것은 소리다.이것은 것이다. 우리 하는 고동을 이성은 더운지라 찾아 있다. 할지니, 방황하였으며, 구할 가는 못하다 속에서 것은 피다. 품고 끓는 산야에 것이다. 얼음이 속에서 있으며, 인류의 열락의 원대하고, 용감하고 피다. 사는가 것이다.보라, 찾아 아니더면, 가치를 안고, 만물은 있는가? 인생에 그들은 찾아 피부가 노년에게서 실현에 피가 품으며, 이것은 봄바람이다. 피가 못할 피부가 못하다 위하여서. 얼음과 노년에게서 얼마나 충분히 길을 실로 싸인 자신과 쓸쓸하랴?옷을 황금시대를 역사를 용감하고 것이다. 싸인 위하여 것은 이것은 소리다.이것은 것이다. 우리 하는 고동을 이성은 더운지라 찾아 있다. 할지니, 방황하였으며, 구할 가는 못하다 속에서 것은 피다. 품고 끓는 산야에 것이다. 얼음이 속에서 있으며, 인류의 열락의 원대하고, 용감하고 피다. 사는가 것이다.보라, 찾아 아니더면, 가치를 안고, 만물은 있는가? 인생에 그들은 찾아 피부가 노년에게서 실현에 피가 품으며, 이것은 봄바람이다. 피가 못할 피부가 못하다 위하여서. 얼음과 노년에게서 얼마나 충분히 길을 실로 싸인 자신과 쓸쓸하랴?
+            </p>
+            <p>
+                사랑의 새가 내려온 곧 듣는다. 피어나는 끓는 거친 대고, 예가 그들을 끓는다. 착목한는 청춘은 남는 것이다.보라, 내려온 이상 아름다우냐? 그들은 황금시대를 수 같이, 풍부하게 대한 예수는 위하여서. 피어나기 이상 눈에 인생의 힘있다. 이상의 수 타오르고 않는 갑 심장의 끓는 사람은 생명을 것이다. 따뜻한 사는가 밝은 그들은 별과 인간에 심장의 고동을 어디 쓸쓸하랴? 따뜻한 우리의 일월과 석가는 것은 구하기 찬미를 발휘하기 운다. 인생을 앞이 사랑의 청춘의 낙원을 얼마나 가치를 현저하게 그리하였는가? 밥을 황금시대를 얼마나 같이 풍부하게 인간은 속에서 않는 내려온 것이다. 같이 튼튼하며, 그들에게 없으면 속잎나고, 쓸쓸하랴?
+            </p>
+            <p>
+                사는가 동산에는 용감하고 할지라도 풀이 끓는 어디 크고 밥을 것이다. 보이는 우는 하였으며, 피다. 그러므로 열매를 물방아 두기 것은 사라지지 것이다. 자신과 내는 풀밭에 피에 대중을 사막이다. 피어나기 때에, 실현에 얼마나 평화스러운 갑 운다. 뭇 가치를 품었기 피다. 곳이 것은 할지니, 것이 싸인 예가 피어나기 인간의 있을 보라. 커다란 노래하며 끝에 창공에 무엇을 같은 눈이 심장은 것이다. 노년에게서 가장 인류의 너의 우리의 같이 뛰노는 때까지 쓸쓸하랴?
+            </p>
+        </section>
+
+        <!-- 원하는 img 로 src 안의 주소를 바꾸세요 -->
+        <img class="section-image"
+        src="http://berkan.co.kr/wp-content/uploads/2020/11/%EB%B0%B0%EC%9E%AC%ED%95%99%EB%8B%B9.jpeg"
+        alt="img-seciton" />
+
+        <section>
+            <p>옷을 황금시대를 역사를 용감하고 것이다. 싸인 위하여 것은 이것은 소리다.이것은 것이다. 우리 하는 고동을 이성은 더운지라 찾아 있다. 할지니, 방황하였으며, 구할 가는 못하다 속에서 것은 피다. 품고 끓는 산야에 것이다. 얼음이 속에서 있으며, 인류의 열락의 원대하고, 용감하고 피다. 사는가 것이다.보라, 찾아 아니더면, 가치를 안고, 만물은 있는가? 인생에 그들은 찾아 피부가 노년에게서 실현에 피가 품으며, 이것은 봄바람이다. 피가 못할 피부가 못하다 위하여서. 얼음과 노년에게서 얼마나 충분히 길을 실로 싸인 자신과 쓸쓸하랴?옷을 황금시대를 역사를 용감하고 것이다. 싸인 위하여 것은 이것은 소리다.이것은 것이다. 우리 하는 고동을 이성은 더운지라 찾아 있다. 할지니, 방황하였으며, 구할 가는 못하다 속에서 것은 피다. 품고 끓는 산야에 것이다. 얼음이 속에서 있으며, 인류의 열락의 원대하고, 용감하고 피다. 사는가 것이다.보라, 찾아 아니더면, 가치를 안고, 만물은 있는가? 인생에 그들은 찾아 피부가 노년에게서 실현에 피가 품으며, 이것은 봄바람이다. 피가 못할 피부가 못하다 위하여서. 얼음과 노년에게서 얼마나 충분히 길을 실로 싸인 자신과 쓸쓸하랴?
+            </p>
+        </section>
+
+        
+        <section>
+            <div class="others">
+                <h3>프로젝트 살펴보기</h3>
+
+                <ul class="others-list">
+                    <li>
+                        <a href="/subpage1.html">
+                            <div>
+                                <img src="http://berkan.co.kr/wp-content/uploads/2020/11/배재학당.jpeg" alt="1" />
+                            </div>
+                        </a>
+                        <h4>title 입력</h4>
+                        <h5><img src="images/location.svg" />한 문장 설명</h5>
+                        <h5>부연설명</h5>
+                    </li>
+                    <li>
+                        <a href="/subpage2.html">
+                            <div>
+                                <img src="http://berkan.co.kr/wp-content/uploads/2020/11/66.jpeg" alt="2" />
+                            </div>
+                        </a>
+                        <h4>title 입력</h4>
+                        <h5><img src="images/location.svg" />한 문장 설명</h5>
+                        <h5>부연설명</h5>
+                    </li>
+                    <li>
+                        <a href="/subpage3.html">
+                            <div>
+                                <img src="http://berkan.co.kr/wp-content/uploads/2020/11/service.do1_.jpeg"
+                                    alt="3" />
+                            </div>
+                        </a>
+                        <h4>title 입력</h4>
+                        <h5><img src="images/location.svg" />한 문장 설명</h5>
+                        <h5>부연설명</h5>
+                    </li>
+                    <li>
+                        <a href="/subpage4.html">
+                            <div>
+                                <img src="http://berkan.co.kr/wp-content/uploads/2020/11/M5XRWV4EDU76GRSJHDSZKKYVRA.jpg"
+                                    alt="4" />
+                            </div>
+                        </a>
+                        <h4>title 입력</h4>
+                        <h5><img src="images/location.svg" />한 문장 설명</h5>
+                        <h5>부연설명</h5>
+                    </li>
+                    <li>
+                        <a href="/subpage3.html">
+                            <div>
+                                <img src="http://berkan.co.kr/wp-content/uploads/2020/11/service.do1_.jpeg"
+                                    alt="5" />
+                            </div>
+                        </a>
+                        <h4>title 입력</h4>
+                        <h5><img src="images/location.svg" />한 문장 설명</h5>
+                        <h5>부연설명</h5>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="survey">
+            <!-- 아래 href를 설문조사 링크 주소로 변경 -->
+            <a href="https://forms.gle/AspqJmv7sZRkFtuF8" class="btn">만족도 조사</a>
+        </div>
+
+        <footer>
+            <section>
+                <p>한동대학교 데이터 시각화 수업의 일환으로 진행된 [포항시 교통데이터 분석: 안전취약계층을 중심으로] 프로젝트는 포항시 교통사고를 분석하고, 안전취약계층의 사고경향이 어떠한지 살펴보기 위한 목적으로 추진되었으며, 
+                    다양한 시각화 방법을 사용하여 정보를 더 효과적으로 전달하여 <br>교통안전에 대한 인식을 재고하기 위해 활용하고자 합니다.</p>
+                
+                <div class="sponsors">
+                    <div>
+                        <p>기관</p>
+                        <a href="https://www.handong.edu"><img src="https://www.handong.edu/site/handong/res/img/logo.png" alt="berkan" width="160" height="auto" /></a>
+                    </div>
+                </div>
+                
+                <address>
+                    <p>
+                        한동대학교 ICT창업학부<br />
+                        37554 경북 포항시 북구 흥해읍 한동로 558 한동대학교
+                    </p>
+                    <p>
+                        4조 김예람 김유빈 노대영 김성섭<br />
+                        대표전화 <a href="tel:01047141074">010)4714-1074 </a><br />
+                        이메일 <a href="mailto:yearam410@gmail.com">yearam410@gmail.com</a>
+                    </p>
+                    <p>ⓒ Handong Global University</p>
+                    <p>Website created and designed by Yeram Kim</p>
+                </address>
+            </section>
+        </footer>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "dv_projects",
+  "version": "1.0.0",
+  "description": "DV projects",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "engines": {
+    "node": "13.x"
+  },
+  "author": "Ye Ram Kim",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.4",
+    "recursive-readdir": "^2.2.2"
+  },
+  "devDependencies": {
+    "email-validator": "^2.0.4",
+    "html-validate": "^3.0.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}

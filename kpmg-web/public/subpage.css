@@ -1,0 +1,72 @@
+p {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+h3, h4, h6 {
+    font-weight: 400;
+}
+
+section {
+    text-align: center;
+}
+
+.pin-img {
+    margin-bottom: 24px;
+    width: 85px;
+    height: 54px;
+}
+
+section h5 img {
+    position: relative;
+    top: 6px;
+}
+
+.section-image {
+    width: 930px;
+    height: 620px;
+    object-fit: cover;
+}
+
+/* subpage */
+.youtube-video {
+    width: 100%;
+    height: 60vh;
+}
+
+.slide-container {
+    width: 930px;
+}
+
+.fade {
+    -webkit-animation: fade 1.5s reverse forwards;
+    animation: fade 1.5s reverse forwards;
+}
+
+@media handheld,
+only screen and (max-width: 1024px) {
+    .main-title * {
+        text-align: left;
+        padding: 0 12vw;
+    }
+
+    .youtube-video {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .slide-container {
+        width: 100%;
+    }
+
+    .section-image {
+        width: 100%;
+        height:  66.66vw;
+        object-fit: cover;
+    }
+
+}
