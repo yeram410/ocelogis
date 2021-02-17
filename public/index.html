@@ -3,14 +3,15 @@
 <html lang="ko_KR">
 
 <head>
-    <title></title>
+    <title>Ocelogis</title>
     <link rel="stylesheet" type="text/css" href="base.css" />
-    <link rel="stylesheet" type="text/css" href="subpage.css" />
+    <link rel="stylesheet" type="text/css" href="yeonji.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbwkee77-XK2WfrYe91wTSAwv2LIgPY2Q&callback=initMap&libraries=&v=weekly"
         defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KRdisplay=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
 </head>
@@ -26,58 +27,75 @@
                 </li>
                 <li class="left">
                     <div class="navbar-title">
-                        <h5></h5>
-                        <h6></h6>
+                        <!-- <h5>Ocelogis</h5> -->
+                        <h5>KPMG Ideathon 2021 </h5>
+                        <h6>배송 업무 스케줄링 B2B 솔루션</h6>
                     </div>
                 </li>
                 <li class="right">
                     <div class="right-container">
-                        <!-- <img class="lang-img" src="images/language.svg" alt="lang-logo" height="20" width="20" /> -->
-                        <!-- <a id="kor" href="/">KOR</a> -->
-                        <!-- <a id="eng" href="/?lang=eng">ENG</a> -->
+                        <img class="lang-img" src="images/language.svg" alt="lang-logo" height="20" width="20" />
+                        <a id="kor" href="/">KOR</a>
+                        <a id="eng" href="/?lang=eng">ENG</a>
                     </div>
                 </li>
             </ul>
         </div>
+        <div class="slide-container">
+            <div class="bbg"></div>
+            <div class="slides">
+                <img class = "fade" src="images/main image.png" style="width:100%">
 
-        <iframe class="youtube-video" src="" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+                <div class="main-title">
+                    <img src="images/logo3.png" class="logo-title"/>
+                    <!-- <h1>Ocelogis</h1> -->
+                </div>
+            </div>
+            <!-- <div class="slides">
+                <img class = "fade" src="https://wallpaperaccess.com/full/1802075.jpg" style="width:100%">
+
+                <div class="main-title">
+                    <h1></h1>
+
+                </div>
+            </div> -->
+            <!-- <div class="slides">
+                <img class = "fade" src="https://wallpaperaccess.com/full/1802077.jpg" style="width:100%">
+
+                <div class="main-title">
+                    <h1> 이 프로젝트는 </h1>
+                    <h2></h2>
+                    <h1> </h1>
+                </div>
+            </div> --> 
+            
+            <!--<a class="prev" onclick="plusSlides(-1)"><img src="images/arrow.png"/></a>
+            <a class="next" onclick="plusSlides(1)"><img src="images/arrow.png"/></a> -->
+        </div>
 
         <section>
-            <img class="pin-img" src='images/logo2.png' alt="pin" width="40" height="40">
-            <br/>
-            <h2></h2>
-            <h3><br><img src="images/location.svg"/></h3>
+            <div>
+                <h3><b>Ocelogis 어플리케이션을</b></h3>
+                <h3><b>직접 체험해보세요!</b></h3>
+            </div>
+        </section>
+
+        <section>
+            <div class="prototype-div">
+                <div class="prototype">
+                    <h3>운송회사용</h3>
+                    <iframe width="300" height="650" src="https://xd.adobe.com/embed/ea243adb-f768-4ae5-a333-37d4210d4b1e-bf77/" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="prototype">
+                    <h3>차주용</h3>
+                    <iframe width="300" height="650" src="https://xd.adobe.com/embed/ea243adb-f768-4ae5-a333-37d4210d4b1e-bf77/" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
         </section>
 
         <!-- <div id="map"></div> -->
 
-        <section>
-            <div>
-                <h3><b></b></h3>
-            </div>
-        </section>
-
-        <!-- <div class="slide-container"> -->
-            <!-- <div class="bbg"></div> -->
-            <!-- <div class="slides fade"> -->
-                <!-- <img src="images/4.jpg" style="width:100%"> -->
-            <!-- </div> -->
-            
-            <!-- <div class="slides fade"> -->
-                <!-- <img src="https://wallpaperaccess.com/full/1802075.jpg" style="width:100%"> -->
-            <!-- </div> -->
-            <!-- <div class="slides fade"> -->
-                <!-- <img src="https://wallpaperaccess.com/full/1802077.jpg" style="width:100%"> -->
-            <!-- </div> -->
-            
-            <!-- <a class="prev" onclick="plusSlides(-1)"><img src="images/arrow.png"/></a> -->
-            <!-- <a class="next" onclick="plusSlides(1)"><img src="images/arrow.png"/></a> -->
-        <!-- </div> -->
-
-
-        <section>
+        <!-- <section>
             <div class="others">
                 <h3>프로젝트 살펴보기</h3>
 
@@ -123,9 +141,10 @@
                     </li>
                 </ul>
             </div>
-        </section>   
+        </section>   -->
 
         <div class="survey">
+            <!-- 아래 href를 설문조사 링크 주소로 변경 -->
             <a href="https://forms.gle/DobS8ghTDMo8F1ny5" class="btn">설문 조사</a>
         </div>
 
@@ -156,7 +175,6 @@
                 </address>
             </section>
         </footer>
-
     </div>
 </body>
 <script src="./index.js"></script>

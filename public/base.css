@@ -335,6 +335,25 @@ address a {
     transform: rotate(180deg);
 }
 
+.prototype-div {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+}
+
+.prototype {
+    width: 300px;
+    
+}
+
+.prototype h3 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+
+
 @-webkit-keyframes fade {
     from {
         opacity: 1
@@ -430,4 +449,6 @@ address a {
         width: 36px;
         height: 36px;
     }
+
+    
 }
