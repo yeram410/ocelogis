@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 # =============================================================================
+# # -*- coding: utf-8 -*-
 # from pandas import DataFrame
 # import folium
 # m = folium.Map(location = [40.720, -73.993],
@@ -20,8 +20,7 @@
 ##################################################################
 from pandas import DataFrame
 import folium
-m = folium.Map([127.028726, 37.546718], zoom_start = 8)
-ex = {'경도' : [127.061026,127.047883],
+ex = {'경도' : [127.061026,128.047883],
       '위도' : [37.493922,37.505675],
       '구분' : ['음식','음식']}
 
@@ -38,9 +37,12 @@ for i in ex.index:
     title = ex.loc[i,'구분']
     folium.Marker([sub_lat,sub_long], tooltip=title).add_to(m)
     
-folium.PolyLine([(ex['경도'][0], ex['위도'][0]), (ex['경도'][1], ex['위도'][1])],
-                color = 'red',
+loc = [(127.061026,37.493922), 
+       (128.047883,37.505675)]
+    
+folium.PolyLine(loc,
+                color='red',
                 weight = 15,
-                opacity = 0.8).add_to(m)
+                ).add_to(m)
 
 m.save('path2.html')
