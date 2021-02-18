@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c89eb2216a714be2b1c34dd43dfd1846 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_c89eb2216a714be2b1c34dd43dfd1846" ></div>
+        
+</body>
+<script>    
+    
+            var map_c89eb2216a714be2b1c34dd43dfd1846 = L.map(
+                "map_c89eb2216a714be2b1c34dd43dfd1846",
+                {
+                    center: [36.048174875, 129.38982325],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_48ef410eef61428390afb5ac9c5847fa = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c89eb2216a714be2b1c34dd43dfd1846);
+        
+    
+            var marker_75a020b828454b6aa265021eb45fd776 = L.marker(
+                [36.103197, 129.391725],
+                {}
+            ).addTo(map_c89eb2216a714be2b1c34dd43dfd1846);
+        
+    
+            marker_75a020b828454b6aa265021eb45fd776.bindTooltip(
+                `<div>
+                     한동대학교
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8182391ad5284dc68e912b2d61e42112 = L.marker(
+                [36.018834, 129.343255],
+                {}
+            ).addTo(map_c89eb2216a714be2b1c34dd43dfd1846);
+        
+    
+            marker_8182391ad5284dc68e912b2d61e42112.bindTooltip(
+                `<div>
+                     포항 시청
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_87501767c9c1489cbad65866f01bca3a = L.marker(
+                [36.027932, 129.367652],
+                {}
+            ).addTo(map_c89eb2216a714be2b1c34dd43dfd1846);
+        
+    
+            marker_87501767c9c1489cbad65866f01bca3a.bindTooltip(
+                `<div>
+                     포항 고속버스터미널
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d3398f7da1f24d7cbcc05add1fad7cc8 = L.marker(
+                [36.067494, 129.392324],
+                {}
+            ).addTo(map_c89eb2216a714be2b1c34dd43dfd1846);
+        
+    
+            marker_d3398f7da1f24d7cbcc05add1fad7cc8.bindTooltip(
+                `<div>
+                     포항 환호공원
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_20f68a84932c417f859e1c056254b13e = L.marker(
+                [36.01356, 129.349753],
+                {}
+            ).addTo(map_c89eb2216a714be2b1c34dd43dfd1846);
+        
+    
+            marker_20f68a84932c417f859e1c056254b13e.bindTooltip(
+                `<div>
+                     포항 시외버스터미널
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a37156b8a7f347c7a7449e451ee804f5 = L.marker(
+                [36.06243, 129.382004],
+                {}
+            ).addTo(map_c89eb2216a714be2b1c34dd43dfd1846);
+        
+    
+            marker_a37156b8a7f347c7a7449e451ee804f5.bindTooltip(
+                `<div>
+                     영일대 해수욕장
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_33ccfa0333fc4331b40ac13e2c773c8c = L.marker(
+                [36.078344, 129.568968],
+                {}
+            ).addTo(map_c89eb2216a714be2b1c34dd43dfd1846);
+        
+    
+            marker_33ccfa0333fc4331b40ac13e2c773c8c.bindTooltip(
+                `<div>
+                     호미곶 상생의 손
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_81f8d494f984476c9af96df213a078c6 = L.marker(
+                [36.013608, 129.322905],
+                {}
+            ).addTo(map_c89eb2216a714be2b1c34dd43dfd1846);
+        
+    
+            marker_81f8d494f984476c9af96df213a078c6.bindTooltip(
+                `<div>
+                     포항공과대학교
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
