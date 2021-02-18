@@ -202,23 +202,6 @@ section {
     top: 6px;
 }
 
-.prototype-div {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: space-evenly;
-}
-
-.prototype {
-    width: 300px;
-    
-}
-
-.prototype h3 {
-    text-align: center;
-    padding-bottom: 12px;
-}
-
 
 /* survey button 설정 */
 .survey {
