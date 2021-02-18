@@ -1,7 +1,7 @@
 {
-  "name": "dv_projects",
+  "name": "Ocelogis",
   "version": "1.0.0",
-  "description": "DV projects",
+  "description": "ocelogis",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
   "engines": {
     "node": "13.x"
   },
-  "author": "Ye Ram Kim",
+  "author": "Ocelot Logistics",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",
