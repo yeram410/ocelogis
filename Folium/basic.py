@@ -5,11 +5,16 @@ import seaborn as sb
 import matplotlib as mpl
 import folium
 
-place = 'Liverpool, United Kingdom'
-graph = ox.graph_from_place(place, network_type='drive')
-nodes, streets = ox.graph_to_gdfs(graph)
-m = ox.plot_graph_folium(graph)
-m.save('edges.html')
+# =============================================================================
+# #전체 엣지 folium에 표현.
+# place = 'Liverpool, United Kingdom'
+# graph = ox.graph_from_place(place, network_type='drive')
+# nodes, streets = ox.graph_to_gdfs(graph)
+# m = ox.plot_graph_folium(graph)
+# m.save('edges.html')
+# =============================================================================
+
+
 # =============================================================================
 # 
 # #street_types = pd.DataFrame(edges["highway"].apply(pd.Series)[0].value_counts().reset_index())
@@ -20,3 +25,15 @@ m.save('edges.html')
 # m.save('edges.html')
 # m
 # =============================================================================
+dst = pd.read_csv('destination.csv')
+
+t1 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
+t2 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
+
+for i in dst.index:
+    lst = [dst.loc[i][0], dst.loc[i][1], dst.loc[i][2]]
+    if i%2 == 0:
+        t1.loc[len(t1)] = lst
+    else:
+        t2.loc[len(t2)] = lst
+
