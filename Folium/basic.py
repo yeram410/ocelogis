@@ -101,30 +101,34 @@
 import osmnx as ox
 import networkx as nx
 import plotly.graph_objects as go
+import matplotlib.pyplot as plt
 import numpy as np
 import folium
 ox.config(use_cache=True, log_console=True)
 ox.__version__
 
-
-#원하는 지역 표시
-city = ox.graph_from_place('북구, 포항시, 경상북도, 대한민국')
-ox.plot_graph(ox.project_graph(city))
-
-#출발지, 도착지 노드 찾기
-orig_node = ox.get_nearest_node(city, (36.102960, 129.391312))
-dest_node = ox.get_nearest_node(city, (36.080058, 129.393611))
-
-dest_node2 = ox.get_nearest_node(city, (36.062193, 129.381536))
-
-#최단거리 분석
-route = nx.shortest_path(city, orig_node, dest_node, weight = 'length')
-route2 = nx.shortest_path(city, dest_node, dest_node2, weight = 'length')
-
-
-
-m = ox.plot_route_folium(city, route )
-ox.plot_route_folium(city, route2).add_to(m)
+# =============================================================================
+# =============================================================================
+# # #원하는 지역 표시
+# # city = ox.graph_from_place('북구, 포항시, 경상북도, 대한민국')
+# # ox.plot_graph(ox.project_graph(city))
+# # 
+# # #출발지, 도착지 노드 찾기
+# # orig_node = ox.get_nearest_node(city, (36.102960, 129.391312))
+# # dest_node = ox.get_nearest_node(city, (36.080058, 129.393611))
+# # 
+# # dest_node2 = ox.get_nearest_node(city, (36.062193, 129.381536))
+# # 
+# # #최단거리 분석
+# # route = nx.shortest_path(city, orig_node, dest_node, weight = 'length')
+# # route2 = nx.shortest_path(city, dest_node, dest_node2, weight = 'length')
+# # 
+# # 
+# # 
+# # m = ox.plot_route_folium(city, route )
+# # ox.plot_route_folium(city, route2).add_to(m)
+# =============================================================================
+# =============================================================================
 #fig.add_to(m)
 #ax.add_to(m)
 #ox.plot_graph_route(city, route2).add_to(m)
@@ -148,6 +152,13 @@ ox.plot_route_folium(city, route2).add_to(m)
 #m = ox.plot_route_folium(city, routes, node_size = 0)
 
 #m = ox.plot_route_folium(city, routes)
-m.save('basic.html')
+#m.save('basic.html')
 
-node, edge = city
+#node, edge = city
+
+G = ox.graph_from_place('북구, 포항시, 경상북도, 대한민국', network_type = 'drive')
+nodes, edges = ox.graph_to_gdfs(G)
+edges.to_csv("edge_inform.csv")
+
+
+
