@@ -29,7 +29,8 @@ def mkEGmap(graph):
     return m
 
 #지도에 배송 목적지 마크
-def markOnMap(destinations, m):    
+def markOnMap(destinations, m):
+    #각 배송지의 위도, 경도, 목적지 이름 이용.    
     for i in destinations.index:
         sub_lat = destinations.loc[i,'latitude']
         sub_long = destinations.loc[i,'longitude']
@@ -47,14 +48,14 @@ def saveMap(m, filename):
 def SamplePath(dest):
     path1 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
     path2 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
-
+    #홀수, 짝수에 따라 임의로 배송지 결정.
     for i in dest.index:
         lst = [dest.loc[i][0], dest.loc[i][1], dest.loc[i][2]]
         if i%2 == 0:
             path1.loc[len(path1)] = lst
         else:
             path2.loc[len(path2)] = lst
-    
+
     #경로 반환
     return path1, path2
 
@@ -75,10 +76,10 @@ def showPathAll(G, routes, colors = ['r','b']):
     ox.plot_graph_routes(G, routes, route_colors = colors, node_size = 0)
 
 #분배된 경로 각각 저장.
-def savePath(G, routes, fileNames):
+def savePath(G, routes, fileNames, paths):
     for i in range(len(routes)):
         m = ox.plot_route_folium(G, routes[i], node_size = 0, popup_attribute = 'length')
-        
+        markOnMap(paths[i], m)
         m.save('./path/'+fileNames[i]+'.html')
 
 #메인함수
@@ -94,9 +95,10 @@ def main():
     sroutes1 = findRoute(G, spth1)
     sroutes2 = findRoute(G, spth2)
     
+    paths = (spth1, spth2)
     routes = (sroutes1, sroutes2)
     showPathAll(G,routes)
-    savePath(G,routes, ['1','2'])
+    savePath(G,routes, ['1','2'], paths)
     
     
     
