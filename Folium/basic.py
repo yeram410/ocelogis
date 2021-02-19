@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
-import pandas as pd
-import osmnx as ox, networkx as nx, geopandas as gpd, matplotlib.pyplot as plt
-import seaborn as sb
-import matplotlib as mpl
-import folium
+# =============================================================================
+# import pandas as pd
+# import osmnx as ox, networkx as nx, geopandas as gpd, matplotlib.pyplot as plt
+# import seaborn as sb
+# import matplotlib as mpl
+# import folium
+# ox.config(use_cache=True, log_console=True)
+# ox.__version__
+# =============================================================================
 
 # =============================================================================
 # #전체 엣지 folium에 표현.
@@ -25,15 +29,69 @@ import folium
 # m.save('edges.html')
 # m
 # =============================================================================
-dst = pd.read_csv('destination.csv')
 
-t1 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
-t2 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
 
-for i in dst.index:
-    lst = [dst.loc[i][0], dst.loc[i][1], dst.loc[i][2]]
-    if i%2 == 0:
-        t1.loc[len(t1)] = lst
-    else:
-        t2.loc[len(t2)] = lst
+# =============================================================================
+# #sample path를 위한 df 나누기
+# dst = pd.read_csv('destination.csv')
+# 
+# t1 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
+# t2 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
+# 
+# for i in dst.index:
+#     lst = [dst.loc[i][0], dst.loc[i][1], dst.loc[i][2]]
+#     if i%2 == 0:
+#         t1.loc[len(t1)] = lst
+#     else:
+#         t2.loc[len(t2)] = lst
+# =============================================================================
 
+# =============================================================================
+# G = ox.graph_from_place('포항시, 경상북도, 대한민국')
+# m = ox.plot_graph_folium(G[36.103197, 129.391725])
+# m.save('graphTst.html')
+#  
+# =============================================================================
+
+# =============================================================================
+# #루트 합치기
+# import osmnx as ox
+# import networkx as nx
+# import plotly.graph_objects as go
+# import numpy as np
+# import folium
+# ox.config(use_cache=True, log_console=True)
+# ox.__version__
+# 
+# 
+# #원하는 지역 표시
+# city = ox.graph_from_place('북구, 포항시, 경상북도, 대한민국')
+# ox.plot_graph(ox.project_graph(city))
+# 
+# #출발지, 도착지 노드 찾기
+# orig_node = ox.get_nearest_node(city, (36.102960, 129.391312))
+# dest_node = ox.get_nearest_node(city, (36.080058, 129.393611))
+# 
+# dest_node2 = ox.get_nearest_node(city, (36.062193, 129.381536))
+# 
+# #최단거리 분석
+# route = nx.shortest_path(city, orig_node, dest_node, weight = 'length')
+# route2 = nx.shortest_path(city, dest_node, dest_node2, weight = 'length')
+# 
+# #루트 여러개 하나로 묶기.
+# del route2[0]
+# routes = route+route2
+# print('route')
+# print(route)
+# print()
+# print('routes')
+# print(routes)
+# #fig, ax = ox.plot_graph_route(city, route2, node_size = 0)
+# 
+# #fig, ax = ox.plot_graph_routes(city, routes, node_size=0)
+# #m = ox.plot_route_folium(city, routes, node_size = 0)
+# 
+# m = ox.plot_route_folium(city, routes)
+# 
+# m.save('basic.html')
+# =============================================================================
