@@ -39,7 +39,7 @@ def markOnMap(destinations, m):
         folium.Marker([sub_lat,sub_long], tooltip=title).add_to(m)
 
 #지도 파일로 저장.
-def saveMap(m, filename):
+def save_initial_map(m, filename):
     m.save(filename)
 
 #def find_path():
@@ -80,7 +80,7 @@ def savePath(G, routes, fileNames, paths):
     for i in range(len(routes)):
         m = ox.plot_route_folium(G, routes[i], node_size = 0, popup_attribute = 'length')
         markOnMap(paths[i], m)
-        m.save('./path/'+fileNames[i]+'.html')
+        m.save('./route/'+fileNames[i]+'.html')
 
 #메인함수
 def main():
@@ -88,7 +88,7 @@ def main():
     dst = read_data('./dst/destination.csv')
     m1 = mkEGmap(G)
     markOnMap(dst, m1)
-    saveMap(m1, 'check.html')
+    save_initial_map(m1, './init/sinit.html')
     
     #for sample test
     spth1, spth2 = SamplePath(dst)
@@ -98,7 +98,7 @@ def main():
     paths = (spth1, spth2)
     routes = (sroutes1, sroutes2)
     showPathAll(G,routes)
-    savePath(G,routes, ['1','2'], paths)
+    savePath(G,routes, ['sr1','sr2'], paths)
     
     
     
