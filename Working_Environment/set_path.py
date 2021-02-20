@@ -5,6 +5,10 @@ ox.config(use_cache=True, log_console=True)
 ox.__version__
 
 #포항시 도로 정보 그래프로 만들기. 
+def mkMap(x, y):
+    m = folium.Map(location = [x, y], zoom_start = 12)
+    return m
+
 def mkGraph(place, Ntype = 'drive'):
     G = ox.graph_from_place(place, network_type=Ntype)
     return G
@@ -39,7 +43,7 @@ def markOnMap(destinations, m):
         folium.Marker([sub_lat,sub_long], tooltip=title).add_to(m)
 
 #지도 파일로 저장.
-def save_initial_map(m, filename):
+def save_map(m, filename):
     m.save(filename)
 
 #def find_path():
@@ -84,11 +88,14 @@ def savePath(G, routes, fileNames, paths):
 
 #메인함수
 def main():
-    G = mkGraph('포항시 경상북도 대한민국')
     dst = read_data('./dst/destination.csv')
+    G = mkGraph('포항시 경상북도 대한민국')
+    m = mkMap(36.031437, 129.402948)
+    markOnMap(dst, m)
+    save_map(m, './init/simple_init.html')
     m1 = mkEGmap(G)
     markOnMap(dst, m1)
-    save_initial_map(m1, './init/sinit.html')
+    save_map(m1, './init/sinit.html')
     
     #for sample test
     spth1, spth2 = SamplePath(dst)
