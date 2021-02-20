@@ -1,11 +1,13 @@
 # KPMG Ideathon 2021 : Ocelot Logistics
-
+Hello! We are Yae Ram Kim, Hyeon Su Kim, Ju Myeong Park, Tae Ha Lim from Ocelot Logistics. Our team is composed of four members majoring in Business/Computer Science. This project is related to KPMG Ideathon with ideas in logistics industry.
 안녕하세요! Ocelot Logistics의 김예람, 김현수, 박주명, 임태하입니다. 저희 팀은 한동대학교에서 Business/Computer Science를 전공하는 네명의 팀원으로 구성되어있으며, 현재 물류산업 관련 아이디어로 KPMG 아이디어톤에 참여하고 있습니다.
 
 # Introduction
-멀티 프로세서의 태스크 스케줄링 알고리즘을 적용한 화물 운송사 및 기사를 위한 스케줄링 어플리케이션입니다. 이번 2021 KPMG Ideathon 시연 목표는 1. 운송사용 2. 화주용 각각의 어플리케이션의 프로토타입 UI/UX 디자인, 주요 기능인 알고리즘을 개발하여 map data에 적용해 최적 경로를 도출해내는 것입니다.
+Our application is a scheduling management service for freight forwarders and drivers which multi-processor task-scheduling algorithm is applied to. Our goal for upcoming 2021 KPMG Ideathon demonstration is 1) to build a prototype of UI/UX design for freight forwarder use and driver use and 2) to derive an optimized route using our main algorithm on a map data.
+멀티 프로세서의 태스크 스케줄링 알고리즘을 적용한 화물 운송사 및 기사를 위한 스케줄링 어플리케이션입니다. 이번 2021 KPMG Ideathon 시연 목표는 1. 운송사용 2. 차주용 각각의 어플리케이션의 프로토타입 UI/UX 디자인, 주요 기능인 알고리즘을 개발하여 map data에 적용해 최적 경로를 도출해내는 것입니다.
 
 ## Background
+The importance of land transportation and delivery services has increased due to the recent growth of the online market and the uprising non-face-to-face culture by the coronavirus. The change in online shopping industry of South Korea after COVID-19 shows the proportion of online shopping transactions out of retail sales form 22% before the outbreak of COVID-19 increased to 28.3% after the outbreak of COVID-19. Especially, the transaction size in food service, food, and household goods increased significantly; Online shopping is now more becoming a crucial aspect of living a life in the untact era. As such, in line with the current consumption trend in the newly advent of the untact era, numerous companies are advocating specialized services and sales strategies for online shopping. As a result, the demand and workload for land transportation and delivery have increased. However, many  
 최근 온라인 시장의 성장과 코로나로 인한 비대면 문화의 확산으로 인해 배송 및 배달 서비스의 중요도가 높아졌습니다. 우리나라의 코로나 19로 인한 온라인쇼핑 변화를 살펴보면 코로나19 발생전 22%대였던 소매판매액 중 온라인쇼핑 거 래액의 비중이 코로나19 발생후 28.3%까지 증가하였습니다. 이중 특히 음식서비스, 식품, 생활용품 등의 거래액이 크 게 증가하며 온라인 쇼핑이 언택트 시대에 점점 더 중요한 부분으로 자리잡아가는 것을 확인할 수 있었습니다. 이렇듯 새롭게 도래한 언택트 시대의 소비추세에 발맞춰 다양한 기업들이 온라인쇼핑에 특화된 서비스 및 판매전략을 내세우 고 있습니다. 이로인해 배달, 배송업무의 수요와 업무량은 늘어났지만, 일을 효율적으로 수행할 수 있는 시스템이 잘 구비되어 있지 않아 배송 지연, 배달원 부족 현상과 같은 문제가 발생하고 있습니다.
 
 ## What is the Problem
