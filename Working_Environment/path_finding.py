@@ -1,5 +1,4 @@
-import osmnx as ox, networkx as nx, geopandas as gpd, matplotlib.pyplot as plt, pandas as pd
-import matplotlib as mpl
+import osmnx as ox, networkx as nx, pandas as pd
 import folium
 ox.config(use_cache=True, log_console=True)
 ox.__version__
