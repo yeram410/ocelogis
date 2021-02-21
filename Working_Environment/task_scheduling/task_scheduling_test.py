@@ -4,7 +4,7 @@ import folium
 ox.config(use_cache=True, log_console=True)
 ox.__version__
 
-def main():
+def task_dist():
     n = int(input('배송원 수를 입력하세요: '))
 
     hub_x,hub_y = input('시작 위치를 입력하세요 ex) 15,30 : ').split(',')
@@ -69,4 +69,6 @@ def mkGraph(place, Ntype = 'drive'):
     G = ox.graph_from_place(place, network_type=Ntype)
     return G
 
+def main():
+    task_dist()
 main()
