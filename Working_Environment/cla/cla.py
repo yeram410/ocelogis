@@ -5,7 +5,6 @@ import pandas as pd
 ############################################
 
 def checkconnect( init, final, graph):
-	connected = [] # List of items connected to the initial node.
 	traveled = [] # List of nodes we have already checked.
     
 	while True:
@@ -20,10 +19,6 @@ def checkconnect( init, final, graph):
 		if len(imm) == 0:
 			return 1
 		
-		# If we have already checked one of the neighbors of the 
-		# current node, take it out of the list of immediate neighbors.
-		# Again, this exploits the fact that the list of immediate
-		# neighbors can only have a length of 2.
 		for i in range(len(traveled)):
 			if imm[0] == traveled[i]:
 				imm.pop(0)

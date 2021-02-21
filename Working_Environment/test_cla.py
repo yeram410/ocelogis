@@ -17,6 +17,7 @@ def checkconnect( init, final, graph):
 		#imm = graph.neighbors(init)
         
         imm = graph.neighbors(init)
+        print(imm)
         for i in imm:
             count_imm += 1
         
