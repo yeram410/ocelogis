@@ -5,7 +5,6 @@ import pandas as pd
 ############################################
 
 def checkconnect( init, final, graph):
-    connected = [] # List of items connected to the initial node.
     traveled = [] # List of nodes we have already checked.
     count_imm = 0
     
@@ -15,7 +14,7 @@ def checkconnect( init, final, graph):
         traveled.append(init)
 		# imm is a list of immediate neighbors to the initial node.
 		#imm = graph.neighbors(init)
-        
+        graph.neighbors
         imm = graph.neighbors(init)
         print(imm)
         for i in imm:

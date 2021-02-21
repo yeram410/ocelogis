@@ -49,19 +49,21 @@ def save_map(m, filename):
 #def find_path():
 
 #샘플 경로 생성.
-def SamplePath(dest):
-    path1 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
-    path2 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
-    #홀수, 짝수에 따라 임의로 배송지 결정.
-    for i in dest.index:
-        lst = [dest.loc[i][0], dest.loc[i][1], dest.loc[i][2]]
-        if i%2 == 0:
-            path1.loc[len(path1)] = lst
-        else:
-            path2.loc[len(path2)] = lst
-
-    #경로 반환
-    return path1, path2
+# =============================================================================
+# def SamplePath(dest):
+#     path1 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
+#     path2 = pd.DataFrame(columns=["location", 'latitude', 'longitude'])
+#     #홀수, 짝수에 따라 임의로 배송지 결정.
+#     for i in dest.index:
+#         lst = [dest.loc[i][0], dest.loc[i][1], dest.loc[i][2]]
+#         if i%2 == 0:
+#             path1.loc[len(path1)] = lst
+#         else:
+#             path2.loc[len(path2)] = lst
+# 
+#     #경로 반환
+#     return path1, path2
+# =============================================================================
 
 #배정된 배송지들 사이의 경로 찾기.
 def findRoute(G, path):
@@ -86,6 +88,63 @@ def savePath(G, routes, fileNames, paths):
         markOnMap(paths[i], m)
         m.save('./route/'+fileNames[i]+'.html')
 
+def task_dist():
+    n = int(input('배송원 수를 입력하세요: '))
+
+    hub_x,hub_y = input('시작 위치를 입력하세요 ex) 36.015380, 129.369903 : ').split(',')
+    
+    dest = read_data('./destination.csv')
+    G = mkGraph('포항시 경상북도 대한민국')
+    
+    #허브 위치
+    orig_node = ox.get_nearest_node(G,(float(hub_x),float(hub_y)))
+
+    #배송원 분배 리스트
+    distribution =[]
+    for i in range(n):
+        distribution.append([])
+        info = "배송원 {}".format(i+1)
+        distribution[i].append(info)
+
+
+    
+    point = []      #도착지 정보 저장
+    num = 0
+
+    #도착지 정보 리스트로 추가 ex) location,latitude,longitude
+    for i in dest.index:
+        sub_lat = dest.loc[i,'latitude']
+        sub_long = dest.loc[i,'longitude']
+        title = dest.loc[i,'location']
+        point.append([])
+        point[num].append((title))
+        point[num].append((sub_lat,sub_long))
+        num+=1
+    
+    num = 0
+
+    #도착지 정보 추가 - 허브로부터의 거리 추가 ex) location,latitude,longitude,length
+    for i in point:
+        after_node = ox.get_nearest_node(G,point[num][1])
+        len =  nx.shortest_path_length(G, orig_node, after_node, weight ='length')/1000
+        point[num].append(len)
+        num+=1
+    
+    #거리에 따른 정렬
+    point.sort(key=lambda x:x[2])
+   
+
+    #거리가 먼 순서대로 분배
+    num =0
+    while point:
+        distribution[num%n].append(point.pop())
+        num+=1
+    
+    #출력
+    for i in distribution:
+        print(i)
+    return distribution
+
 #메인함수
 def main():
     dst = read_data('./dst/destination.csv')
@@ -101,7 +160,6 @@ def main():
     spth1, spth2 = SamplePath(dst)
     sroutes1 = findRoute(G, spth1)
     sroutes2 = findRoute(G, spth2)
-    
     paths = (spth1, spth2)
     routes = (sroutes1, sroutes2)
     showPathAll(G,routes)
