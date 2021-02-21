@@ -48,13 +48,10 @@ def checkconnect( init, final, graph):
 ###################3
 
 
-
+def cla(marked_list, G)
 matrix = {}
-#프로세서에 할당된 배송지 리스트
-marked_list = []
 
 #배송지 노드로 변환
-G = ['그래프']
 node_list = []
 for mark in marked_list:
     node = ox.get_nearest_node(G, mark[1], mark[2])
@@ -68,7 +65,7 @@ for i in range(len(node_list)):
         w = nx.shortest_path(G, node[i], node[j])
         matrix[i][j] = w
       
-#코스트
+#코스트 계산
 cost = 0
         
 #cheapest 설정
@@ -106,6 +103,7 @@ for k in range(len(node_list)):
         visited.append(init) # List of nodes we have been to. 
         visited.append(final)
 		#traveled3 = list(set(traveled3))
-
+    else:
+        chart.add_edge(init, final)
 
 
