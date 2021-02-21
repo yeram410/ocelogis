@@ -59,6 +59,7 @@ def task_dist():
     #출력
     for i in distribution:
         print(i)
+    return distribution
 
 #배송지 정보 불러오기
 def read_data(fileName):
