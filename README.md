@@ -21,10 +21,12 @@ The importance of land transportation and delivery services has increased due to
 ## [Working Environment](https://github.com/yeram410/ocelogis/tree/main/Working_Environment)
 Code | Explanation | Used Library
 -----|------|---------------
-[dataHan.py](https://github.com/yeram410/ocelogis/tree/main/Working_Environment/dataHan.py) | 지도 데이터 | pandas <br> 2 <br> 3
+[path_finding.py] | 정보 입력받아 배송원의 수 만큼 경로 생성 | pandas, osmnx, folium, networkx<br> 2 <br> 3
+[Working Environment](https://github.com/yeram410/ocelogis/tree/main/Working_Environment) | 경로 분배 프로그램 작업 환경 |
 
 <br>
 <br>
 
 
 # Web
+
