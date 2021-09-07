@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트러블 AI 1단계 지표 트래킹 보드</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <section>
+    <div class="intro">
+      <h2>트러블 AI 1단계 결과 공유</h2>
+      <h4>수집기간: 9월 1일 - 9월 6일</h4>
+    </div>
+
+    <!-- 만족도 조사 -->
+    <div class = "satisfaction_survey">
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Status', 'Num of people'],
+            ['만족해요',     65],
+            ['별로에요',     19]
+          ]);
+
+          var options = {
+            title: '1.트러블 AI 만족도 조사',
+            pieHole: 0.4,
+            slices: {
+              0: { color: '#5385EC'},
+              1: {color: '#FFB1B1'}
+            }
+          };
+
+          var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div id="donutchart" style="width: 900px; height: 500px;"></div>
+    </div>
+
+    <!-- 서비스적 니즈 조사 -->
+    <div class = "user_survey">
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ["Type", "num", { role: "style" } ],
+            ["정확한 피부진단", 48, "#5385EC"],
+            ["피부 관리 정보", 16, "#FFB1B1"],
+            ["화장품 추천", 6, "#7B61FF"],
+            ["시술 추천", 12, "color: #FFA553"]
+          ]);
+    
+          var view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+                           { calc: "stringify",
+                             sourceColumn: 1,
+                             type: "string",
+                             role: "annotation" },
+                           2]);
+    
+          var options = {
+            title: "2. 유저의 서비스적 니즈",
+            width: 700,
+            height: 500,
+            bar: {groupWidth: "55%"},
+            legend: { position: "none" },
+          };
+          var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+          chart.draw(view, options);
+      }
+      </script>
+    <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+    </div>
+
+  </section>
+
+
+
+
+</body>
+</html>
